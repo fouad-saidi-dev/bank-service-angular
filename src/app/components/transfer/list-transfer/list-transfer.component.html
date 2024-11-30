@@ -1,0 +1,74 @@
+<div class="container">
+  <mat-toolbar>
+    <button mat-raised-button color="primary" routerLink="/admin/new-beneficiary">Add Beneficiary</button>
+  </mat-toolbar>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Beneficiaries
+      </mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="beneficiaryName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Beneficiary </th>
+          <td mat-cell *matCellDef="let element"> {{element.beneficiary.firstName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sourceRib">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Source Rib </th>
+          <td mat-cell *matCellDef="let element"> {{element.sourceRib}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" (click)="editTransfer(element.id)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteTransfer(element.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                     showFirstLastButtons
+      >
+      </mat-paginator>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>
+

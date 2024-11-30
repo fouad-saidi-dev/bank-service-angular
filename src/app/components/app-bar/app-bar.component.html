@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="myDrawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span style="flex:auto">BANK SERVICE</span>
+  <button mat-button routerLink="#">Home</button>
+  <!--  <button mat-button routerLink="#">Profile</button>-->
+
+  <!--  <mat-menu #importMenu>-->
+  <!--    <button mat-menu-item routerLink="/admin/customers">Load Customers</button>-->
+  <!--    <button mat-menu-item routerLink="/admin/products">Load Products</button>-->
+  <!--  </mat-menu>-->
+
+  <button mat-raised-button color="accent" >Logout</button>
+</mat-toolbar>
+<mat-drawer-container>
+  <mat-drawer #myDrawer opened="true" mode="side" position="start">
+    <mat-list>
+      <mat-list-item>
+        <button mat-button routerLink="/admin/beneficiaries">
+          <mat-icon>group</mat-icon>
+          Beneficiaries
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button routerLink="/admin/transfers">
+          <mat-icon>sync_alt</mat-icon>
+          Transfers
+        </button>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="min-height: 600px">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
