@@ -1,0 +1,27 @@
+.chat-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+mat-form-field {
+  flex: 1;
+}

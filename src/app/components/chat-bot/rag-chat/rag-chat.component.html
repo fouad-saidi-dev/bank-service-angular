@@ -1,0 +1,33 @@
+<mat-card class="chat-container">
+  <mat-card-header>
+    <mat-icon>chat</mat-icon>
+    <mat-card-title>Chat with Bot</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="chat-box">
+    <div *ngIf="messages.length > 0">
+      <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+          <mat-icon matListIcon>
+            {{ message.type === 'user' ? 'person' : 'smart_toy' }}
+          </mat-icon>
+          <div matLine>
+            <strong>{{ message.type === 'user' ? 'You' : 'Bot' }}:</strong>
+            {{ message.text }}
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div *ngIf="isLoading" class="loading">
+      <mat-progress-spinner mode="indeterminate" diameter="30"></mat-progress-spinner>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="chat-input">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Ask a question</mat-label>
+      <input matInput [(ngModel)]="question" (keyup.enter)="sendMessage()" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="sendMessage()">Send</button>
+  </mat-card-actions>
+</mat-card>

@@ -5,6 +5,7 @@ import {ListTransferComponent} from "./components/transfer/list-transfer/list-tr
 import {ListBeneficiaryComponent} from "./components/beneficiaries/list-beneficiary/list-beneficiary.component";
 import {NewBeneficiaryComponent} from "./components/beneficiaries/new-beneficiary/new-beneficiary.component";
 import {NewTransferComponent} from "./components/transfer/new-transfer/new-transfer.component";
+import {RagChatComponent} from "./components/chat-bot/rag-chat/rag-chat.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -26,6 +27,9 @@ const routes: Routes = [
       },
       {
         path: "edit-transfer/:id", component: NewTransferComponent,
+      },
+      {
+        path: "chat-bot", component: RagChatComponent,
       }
     ]
   }

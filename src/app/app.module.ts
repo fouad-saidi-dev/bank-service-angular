@@ -30,6 +30,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
 import { TransferDialogComponent } from './components/beneficiaries/transfer-dialog/transfer-dialog.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import { RagChatComponent } from './components/chat-bot/rag-chat/rag-chat.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     NewBeneficiaryComponent,
     ListBeneficiaryComponent,
     AppBarComponent,
-    TransferDialogComponent
+    TransferDialogComponent,
+    RagChatComponent
   ],
   imports: [
     BrowserModule,
