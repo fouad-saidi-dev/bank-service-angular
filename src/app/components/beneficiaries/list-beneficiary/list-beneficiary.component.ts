@@ -44,20 +44,22 @@ export class ListBeneficiaryComponent implements OnInit{
     });
   }
 
-  displayTransferDialog(transferList:any[],name:string) {
+  displayTransferDialog(transferList:any[],name:string,id:string,sourceRib:string) {
     console.log("Transfers",transferList)
     this.dialog.open(TransferDialogComponent, {
       height: '400px',
       width: '800px',
       data : {
         transferList,
-        name
+        name,
+        id,
+        sourceRib
       }
     });
   }
 
   editBeneficiary(id:string) {
-
+     this.router.navigateByUrl(`/admin/new-beneficiary/${id}`)
   }
 
   deleteBeneficiary(id:string) {

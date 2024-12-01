@@ -13,29 +13,29 @@
       <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z1">
 
         <ng-container matColumnDef="firstName">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name</th>
           <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
         </ng-container>
 
 
         <ng-container matColumnDef="lastName">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name</th>
           <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
         </ng-container>
 
 
         <ng-container matColumnDef="rib">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Rib </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Rib</th>
           <td mat-cell *matCellDef="let element"> {{element.rib}} </td>
         </ng-container>
 
         <ng-container matColumnDef="beneficiaryType">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Beneficiary Type </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Beneficiary Type</th>
           <td mat-cell *matCellDef="let element"> {{element.beneficiaryType}} </td>
         </ng-container>
 
         <ng-container matColumnDef="actions">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions</th>
           <td mat-cell *matCellDef="let element">
             <button mat-icon-button color="primary" (click)="editBeneficiary(element.id)">
               <mat-icon>edit</mat-icon>
@@ -43,9 +43,10 @@
             <button mat-icon-button color="warn" (click)="deleteBeneficiary(element.id)">
               <mat-icon>delete</mat-icon>
             </button>
-            <button mat-icon-button color="primary" (click)="displayTransferDialog(element.transferList,element.firstName)">
-            <mat-icon>list</mat-icon>
-          </button>
+            <button mat-icon-button color="primary"
+                    (click)="displayTransferDialog(element.transferList,element.firstName,element.id,element.rib)">
+              <mat-icon>list</mat-icon>
+            </button>
           </td>
 
         </ng-container>

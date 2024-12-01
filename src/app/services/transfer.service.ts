@@ -14,4 +14,8 @@ export class TransferService {
   public getTransferList() : Observable<Array<Transfer>>{
     return this.http.get<Array<Transfer>>(`${environment.baseUrl}${this.urlService}`);
   }
+
+  public saveTransfer(transfer:Transfer) : Observable<Transfer>{
+    return this.http.post<Transfer>(`${environment.baseUrl}${this.urlService}`,transfer);
+  }
 }

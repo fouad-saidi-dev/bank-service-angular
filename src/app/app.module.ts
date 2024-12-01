@@ -29,6 +29,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
 import { TransferDialogComponent } from './components/beneficiaries/transfer-dialog/transfer-dialog.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { TransferDialogComponent } from './components/beneficiaries/transfer-dia
     MatNativeDateModule,
     MatSelectModule,
     MatDialogModule,
-    MatProgressSpinner
+    MatProgressSpinner,
+    MatGridListModule
   ],
   providers: [
     provideAnimationsAsync()
