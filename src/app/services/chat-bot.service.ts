@@ -11,9 +11,7 @@ export class ChatBotService {
   constructor(private http:HttpClient) { }
 
   public sendMessage(question:string):Observable<String>{
-    //const params = new HttpParams().set("qst",question);
     const url = `${environment.baseUrl}${this.urlService}?qst=${encodeURIComponent(question)}`;
     return this.http.get(url, { responseType: 'text' });
-    //return this.http.get<String>(`${environment.baseUrl}${this.urlService}`,{params})
   }
 }

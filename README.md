@@ -1,27 +1,38 @@
-# BankServiceAppAngular
+# BANK SERVICE ANGULAR APP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+* check backend with microservices spring boot : https://github.com/fouad-saidi-dev/bank-service-spring-cloud
 
-## Development server
+## BANK SERVICE MANAGEMENT :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### GET BENEFICIARIES :
 
-## Code scaffolding
+![beneficiaries](captures/an-benefs.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### GET TRANSFERS OF BENEFICIARY :
 
-## Build
+![transfers of beneficiary](captures/an-transfers-of-benf.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### ADD BENEFICIARY :
 
-## Running unit tests
+![add beneficiary](captures/an-add-benef.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### AFTER ADDING BENEFICIARY :
 
-## Running end-to-end tests
+![after add beneficiary](captures/an-after-add.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### EDIT BENEFICIARY :
 
-## Further help
+![edit beneficiary](captures/an-edit-benf.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### AFTER EDITING BENEFICIARY :
+
+![after edit beneficiary](captures/an-after-edit.png)
+
+### GET ALL TRANSFERS :
+
+![all transfers](captures/an-transfers.png)
+
+### CHAT-BOT :
+
+![chat-bot](captures/chatbot.png)
+

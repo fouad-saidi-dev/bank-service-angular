@@ -33,14 +33,14 @@ export class NewTransferComponent implements OnInit{
   saveTransfer() {
     let transfer:Transfer=this.transferForm.value
     console.log("Transfer Data ===>> ",transfer)
-    // this.transferService.saveTransfer(transfer).subscribe({
-    //   next:(tr)=>{
-    //     console.log("Transfer ==> ",tr)
-    //   },
-    //   error:(err)=>{
-    //     console.log("Error Transfer ==> ",err)
-    //   }
-    // })
+    this.transferService.saveTransfer(transfer).subscribe({
+      next:(tr)=>{
+        console.log("Transfer ==> ",tr)
+      },
+      error:(err)=>{
+        console.log("Error Transfer ==> ",err)
+      }
+    })
   }
 
   onCancel() {

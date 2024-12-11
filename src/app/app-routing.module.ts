@@ -23,7 +23,7 @@ const routes: Routes = [
         path: "new-beneficiary/:id", component: NewBeneficiaryComponent,
       },
       {
-        path: "new-transfer/:id", component: NewTransferComponent,
+        path: "new-transfer", component: NewTransferComponent,
       },
       {
         path: "edit-transfer/:id", component: NewTransferComponent,
